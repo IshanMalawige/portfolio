@@ -12,7 +12,7 @@ function AboutCard() {
             from <span className="purple">Embilipitiya, Sri Lanka</span>.
             <br />
             <br />
-            I am an undergraduate student in Faculty Of Technology at <span className="purple">General Sir John Kotelawala Defence University (KDU)</span>, specializing in the Network Engineering (FOT Intake 40).
+            I am an undergraduate student in Faculty Of Technology at <span className="purple">General Sir John Kotelawala Defence University (KDU)</span>, specializing in the Network Engineering .
             <br />
             <br />
             My core expertise lies in designing enterprise network infrastructures, managing virtualized environments, and implementing robust security configurations.
