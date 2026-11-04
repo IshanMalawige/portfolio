@@ -9,30 +9,31 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Ishan Malawige </span>
-            from <span className="purple"> Embilipitiya, Srilanka</span>
-            <br />
-            I am graduate Student Of Sir John Kotelawala Defence University in Srilanka.
-            <br />
-            I have completed BT(Hons) Information And Communication Technology (BICT) from Faculty of Technology KDU
-           
+            from <span className="purple">Embilipitiya, Sri Lanka</span>.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            I am an undergraduate student in Information Technology at <span className="purple">General Sir John Kotelawala Defence University (KDU)</span>, specializing in the Faculty of Technology (FOT Intake 40).
+            <br />
+            <br />
+            My core expertise lies in designing enterprise network infrastructures, managing virtualized environments, and implementing robust security configurations.
+            <br />
+            <br />
+            Apart from engineering infrastructure and systems, some other activities that I enjoy include:
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> Exploring Virtualization Labs (EVE-NG / PNETLab)
             </li>
             <li className="about-activity">
-              <ImPointRight /> Watching Movies
+              <ImPointRight /> Strategic Gaming & Tactical Simulations
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Technology & Cybersecurity Research
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Building secure, scalable, and resilient enterprise networks that make a difference!"{" "}
           </p>
           <footer className="blockquote-footer">Ishan Malawige</footer>
         </blockquote>
