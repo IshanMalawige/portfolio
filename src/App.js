@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import Articles from "./components/Articles/Articles"; // ඔයාගේ ෆෝල්ඩර් ස්ට්‍රක්චර් එක අනුව path එක (උදා: "./components/Articles")
 import {
   BrowserRouter as Router,
   Route,
@@ -17,7 +18,6 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Contact from "./components/Contact/Contact";
-
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -41,9 +41,9 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/articles" element={<Articles />} /> {/* අලුතින් එකතු කළ Articles Route එක */}
           <Route path="/contact" element={<Contact />} />
           
-        
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

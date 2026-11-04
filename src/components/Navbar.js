@@ -38,14 +38,14 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-      <Navbar.Brand href="/" className="d-flex">
-  <img
-    src={logo}
-    className="img-fluid logo"
-    alt="brand"
-    style={{ width: "1000px", height: "1000px" }}
-  />
-</Navbar.Brand>
+        <Navbar.Brand href="/" className="d-flex">
+          <img
+            src={logo}
+            className="img-fluid logo"
+            alt="brand"
+            style={{ width: "1000px", height: "1000px" }}
+          />
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -97,15 +97,25 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            {/* මෙතැනට අලුතින් Articles ලින්ක් එක එකතු කර ඇත */}
             <Nav.Item>
-             <Nav.Link
+              <Nav.Link
+                as={Link}
+                to="/articles"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Articles
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+               <Nav.Link
                 as={Link}
                 to="/Contact"
                 onClick={() => updateExpanded(false)}>                                         
-    <ImBlog style={{ marginBottom: "2px" }} /> Contact me
-  </Nav.Link>
-</Nav.Item>
-
+                <ImBlog style={{ marginBottom: "2px" }} /> Contact me
+              </Nav.Link>
+            </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button
