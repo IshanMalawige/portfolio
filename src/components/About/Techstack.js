@@ -1,70 +1,86 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+
+import adImg from "../../Assets/active directry.png";
+import esxiImg from "../../Assets/esxi.jpg";
+import eveImg from "../../Assets/eveng.jpg";
+import pnetImg from "../../Assets/pnetlab.png";
+
 import {
   SiCisco,
   SiPython,
   SiLinux,
   SiWindows,
-  SiVmware,
   SiWireshark,
   SiKalilinux,
   SiDocker,
   SiGit,
   SiFortinet,
+  SiVisualstudiocode,
+  SiVercel,
 } from "react-icons/si";
-import { FaNetworkWired, FaServer, FaShieldAlt } from "react-icons/fa";
+import { FaServer } from "react-icons/fa";
 
 function Techstack() {
+  const skills = [
+    { icon: <SiCisco />, color: "#049fd9" },
+    { icon: <SiFortinet />, color: "#ee1c25" },
+    { icon: <FaServer />, color: "#0078d4" },
+    { image: adImg, isImg: true },
+    { image: esxiImg, isImg: true },
+    { icon: <SiWireshark />, color: "#1679A7" },
+    { image: eveImg, isImg: true },
+    { image: pnetImg, isImg: true },
+    { icon: <SiPython />, color: "#3776ab" },
+    { icon: <SiLinux />, color: "#fcc624" },
+    { icon: <SiKalilinux />, color: "#557c94" },
+    { icon: <SiDocker />, color: "#2496ed" },
+    { icon: <SiGit />, color: "#f05032" },
+    { icon: <SiWindows />, color: "#00a4ef" },
+    { icon: <SiVisualstudiocode />, color: "#007acc" },
+    { icon: <SiVercel />, color: "#ffffff" }
+  ];
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#049fd9" }}>
-        <SiCisco />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Cisco Routing & Switching</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#ee1c25" }}>
-        <SiFortinet />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>FortiGate Security</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#0078d4" }}>
-        <FaServer />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Windows Server AD DS</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#607078" }}>
-        <SiVmware />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>VMware ESXi</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#1679A7" }}>
-        <SiWireshark />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Wireshark Analyzer</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#38bdf8" }}>
-        <FaNetworkWired />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>EVE-NG / PNETLab</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#3776ab" }}>
-        <SiPython />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Python Scripting</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#fcc624" }}>
-        <SiLinux />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Linux Systems</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#557c94" }}>
-        <SiKalilinux />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Cybersecurity / Kali</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#2496ed" }}>
-        <SiDocker />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Docker & Virtualization</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#f05032" }}>
-        <SiGit />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Git & Version Control</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" style={{ color: "#00a4ef" }}>
-        <SiWindows />
-        <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Windows Administration</div>
-      </Col>
+      {skills.map((skill, index) => (
+        <Col 
+          xs={6} 
+          sm={4} 
+          md={3} 
+          lg={2} 
+          className="tech-icons" 
+          key={index} 
+          style={{ 
+            textAlign: "center", 
+            padding: "10px", 
+            width: "140px",
+            height: "140px",
+            display: "flex", 
+            flexDirection: "column",
+            alignItems: "center", 
+            justifyContent: "center",
+            margin: "10px"
+          }}
+        >
+          {skill.isImg ? (
+            <img 
+              src={skill.image} 
+              alt="tech-logo" 
+              style={{ 
+                width: "100px", 
+                height: "100px", 
+                objectFit: "contain", 
+                filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.4))" 
+              }} 
+            />
+          ) : (
+            <div style={{ fontSize: "3.5rem", color: skill.color }}>
+              {skill.icon}
+            </div>
+          )}
+        </Col>
+      ))}
     </Row>
   );
 }

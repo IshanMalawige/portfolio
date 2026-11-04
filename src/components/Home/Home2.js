@@ -49,9 +49,34 @@ function Home2() {
               </i>
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col md={4} className="myAvtar" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Tilt>
-              <img src={YY} className="img-fluid" alt="avatar" />
+              <div 
+                style={{
+                  width: "280px",
+                  height: "280px",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  border: "4px solid rgba(199, 112, 240, 0.6)",
+                  boxShadow: "0px 0px 20px rgba(199, 112, 240, 0.4)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <img 
+                  src={YY} 
+                  className="img-fluid" 
+                  alt="avatar" 
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center 20%",
+                    borderRadius: "50%"
+                  }}
+                />
+              </div>
             </Tilt>
           </Col>
         </Row>
