@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
+import { CgGitFork, CgWorkAlt } from "react-icons/cg"; // CgWorkAlt මෙතැනට නිවැරදිව ඉම්පෝර්ට් කර ඇත
 import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
@@ -73,6 +73,17 @@ function NavBar() {
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
             </Nav.Item>
+            
+            {/* Professional Journey ලින්ක් එක */}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgWorkAlt style={{ marginBottom: "2px" }} /> Career
+              </Nav.Link>
+            </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
@@ -97,7 +108,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* මෙතැනට අලුතින් Articles ලින්ක් එක එකතු කර ඇත */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -112,7 +122,8 @@ function NavBar() {
                <Nav.Link
                 as={Link}
                 to="/Contact"
-                onClick={() => updateExpanded(false)}>                                         
+                onClick={() => updateExpanded(false)}
+              >                                 
                 <ImBlog style={{ marginBottom: "2px" }} /> Contact me
               </Nav.Link>
             </Nav.Item>

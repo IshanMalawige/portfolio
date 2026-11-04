@@ -10,6 +10,9 @@ import PY from "../../Assets/Projects/PY.png";
 import CA from "../../Assets/Projects/CA.png";
 import Guess from "../../Assets/Projects/Guess.jpeg";
 import XX from "../../Assets/Projects/XX.webp";
+import networkTopologyImg from "../../Assets/network topology.jpg";
+import multiSiteNetworkImg from "../../Assets/article2.jpg";
+import activeDirectoryImg from "../../Assets/article3.jpg"; // Project 3 සඳහා Active Directory Lab image එක
 
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,6 +20,30 @@ function Projects() {
   const projectsData = [
     {
       id: 1,
+      imgPath: networkTopologyImg,
+      title: "Redesign and Configure Secure Network Infrastructure for KDU",
+      description: "Designed and implemented a secure enterprise network infrastructure using a multi-vendor environment with Active Directory integration. The project focuses on network segmentation, centralized authentication, and secure access control across heterogeneous devices, incorporating core services like domain-based user management, policy enforcement, and role-based access.",
+      ghLink: "https://github.com/IshanMalawige",
+      category: "Network Projects",
+    },
+    {
+      id: 2,
+      imgPath: multiSiteNetworkImg,
+      title: "Enterprise Network Modernization: Centralized AD/DHCP & Multi-Site FortiGate Security",
+      description: "Designed, deployed, and secured a multi-site network infrastructure unifying Head Office, Server Network, and Branch operations under centralized Active Directory services and granular FortiGate security policies, featuring DHCP relay, zero-trust segmentation, and RBAC.",
+      ghLink: "https://github.com/IshanMalawige",
+      category: "Network Projects",
+    },
+    {
+      id: 3,
+      imgPath: activeDirectoryImg,
+      title: "Enterprise Windows Server & Hybrid Active Directory Infrastructure",
+      description: "Designed and implemented an end-to-end, enterprise-grade hybrid Windows Server infrastructure for Ceylon Trends (Pvt) Ltd (350+ employees), featuring Active Directory DS, GPOs, DHCP Failover, FSRM, IIS, WDS deployment, and an Azure cloud Additional Domain Controller (ADC).",
+      ghLink: "https://www.linkedin.com/pulse/enterprise-windows-server-infrastructure-lab-ishan-malawige-bfstc/",
+      category: "Network Projects",
+    },
+    {
+      id: 4,
       imgPath: AMS,
       title: "Attendance Management System",
       description: "The Attendance Management System developed for KDU utilizes PHP for the web interface and an Arduino ESP8266 with a fingerprint sensor for attendance tracking. The system enables student enrollment, attendance recording, and report generation.",
@@ -24,7 +51,7 @@ function Projects() {
       category: "Software Development",
     },
     {
-      id: 2,
+      id: 5,
       imgPath: WSU,
       title: "Jungle Journey",
       description: "The Safari Booking Web Application, built using the MERN stack (MongoDB, Express, React, and Node.js), allows users to browse and book safari tours. It features a dynamic user interface where customers can explore various safari packages.",
@@ -32,7 +59,7 @@ function Projects() {
       category: "Software Development",
     },
     {
-      id: 3,
+      id: 6,
       imgPath: BA,
       title: "Saloon Booking App",
       description: "The Salon Booking App, developed using Dart and Flutter, allows users to easily browse and book salon services. It features a sleek and user-friendly interface where customers can view available services and choose their preferred stylist.",
@@ -40,7 +67,7 @@ function Projects() {
       category: "Mobile Application Projects",
     },
     {
-      id: 4,
+      id: 7,
       imgPath: Guess,
       title: "Guess GAME",
       description: "The Guess Game is a fun and interactive application built using Python. It challenges users to guess a randomly generated number within a specified range, providing feedback on each guess.",
@@ -48,15 +75,15 @@ function Projects() {
       category: "Software Development",
     },
     {
-      id: 5,
+      id: 8,
       imgPath: babyGender,
       title: "Genderizer app",
       description: "The Genderizor app, developed using Dart and Flutter, is designed to predict the gender of a person based on their name. Users input a name, and the app provides a gender prediction using machine learning algorithms.",
       ghLink: "https://github.com/IshanMalawige/Genderizor",
-      category: "Software Development",
+      category: "Mobile Application Projects",
     },
     {
-      id: 6,
+      id: 9,
       imgPath: XX,
       title: "Portfolio",
       description: "The personal portfolio website built using React.js to showcase technical skills, projects, resume preview, and contact details with modern UI and particle background animations.",
@@ -64,7 +91,7 @@ function Projects() {
       category: "Software Development",
     },
     {
-      id: 7,
+      id: 10,
       imgPath: PY,
       title: "GUI Calculator",
       description: "The Python GUI Calculator is a simple, user-friendly application built using Python and Tkinter. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division.",
@@ -72,22 +99,13 @@ function Projects() {
       category: "Software Development",
     },
     {
-      id: 8,
+      id: 11,
       imgPath: CA,
       title: "Calculator Mobile app",
       description: "The Calculator app, developed using Flutter and Dart, is a sleek and responsive mobile application that allows users to perform basic arithmetic operations with an intuitive interface.",
       ghLink: "",
-      category: "Software Development",
+      category: "Mobile Application Projects",
     },
-    {
-      id: 9,
-      imgPath: CA,
-      title: "Calculator Mobile app",
-      description: "The Calculator app, developed using Flutter and Dart, is a sleek and responsive mobile application that allows users to perform basic arithmetic operations with an intuitive interface.",
-      ghLink: "",
-      category: "Network Projects",
-    },
-    
   ];
 
   // සිලෙක්ට් කරන කැටගරි එකට අදාළ ප්‍රොජෙක්ට්ස් පමණක් ෆිල්ටර් කිරීම
