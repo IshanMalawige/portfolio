@@ -8,12 +8,12 @@ import {
   SiVercel,
   SiFortinet,
 } from "react-icons/si";
-import { FaNetworkWired, FaServer, FaCloud, FaShieldAlt } from "react-icons/fa";
+import { FaNetworkWired, FaServer, FaCloud } from "react-icons/fa";
 
 function Toolstack() {
   const tools = [
     { name: "VS Code", icon: <SiVisualstudiocode />, color: "#007acc" },
-    { name: "VMware / ESXi", icon: <SiVmware />, color: "#607078" },
+    { name: "VMware ESXi", icon: <SiVmware />, color: "#607078" },
     { name: "Wireshark", icon: <SiWireshark />, color: "#1679A7" },
     { name: "Active Directory", icon: <FaServer />, color: "#0078d4" },
     { name: "Windows Server", icon: <SiWindows />, color: "#00a4ef" },
