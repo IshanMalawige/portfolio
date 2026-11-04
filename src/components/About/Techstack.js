@@ -57,7 +57,7 @@ function Techstack() {
         <SiDocker />
         <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Docker & Virtualization</div>
       </Col>
-      <Col xs_{4} md={2} className="tech-icons" style={{ color: "#f05032" }}>
+      <Col xs={4} md={2} className="tech-icons" style={{ color: "#f05032" }}>
         <SiGit />
         <div style={{ fontSize: "0.8rem", marginTop: "10px", color: "#c770f0" }}>Git & Version Control</div>
       </Col>
