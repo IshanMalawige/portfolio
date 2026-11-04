@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork, CgWorkAlt } from "react-icons/cg"; // CgWorkAlt මෙතැනට නිවැරදිව ඉම්පෝර්ට් කර ඇත
+import { CgGitFork, CgWorkAlt } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
@@ -13,7 +12,6 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
@@ -38,14 +36,24 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img
-            src={logo}
-            className="img-fluid logo"
-            alt="brand"
-            style={{ width: "1000px", height: "1000px" }}
-          />
+        {/* මෙන්න අලුත් මොඩර්න් ටෙක්ස්ට් ලෝගෝ එක (</> IM) */}
+        <Navbar.Brand href="/" className="d-flex" style={{ alignItems: "center", textDecoration: "none" }}>
+          <div style={{
+            fontFamily: "monospace",
+            fontSize: "1.5rem",
+            fontWeight: "bold",
+            color: "#fff",
+            background: "linear-gradient(135deg, #c770f0 0%, #61dafb 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            display: "flex",
+            alignItems: "center",
+            gap: "5px"
+          }}>
+            <span style={{ color: "#c770f0" }}>&lt;/&gt;</span> IM
+          </div>
         </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -56,6 +64,7 @@ function NavBar() {
           <span></span>
           <span></span>
         </Navbar.Toggle>
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
@@ -74,7 +83,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
             
-            {/* Professional Journey ලින්ක් එක */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -119,9 +127,9 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-               <Nav.Link
+              <Nav.Link
                 as={Link}
-                to="/Contact"
+                to="/contact"
                 onClick={() => updateExpanded(false)}
               >                                 
                 <ImBlog style={{ marginBottom: "2px" }} /> Contact me
