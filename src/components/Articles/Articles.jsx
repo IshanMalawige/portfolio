@@ -73,7 +73,7 @@ function Articles() {
   ];
 
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="project-section" id="articles">
       <Particle />
       <Container>
         <h1 className="project-heading">

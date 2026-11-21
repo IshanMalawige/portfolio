@@ -3,16 +3,16 @@ import Preloader from "./components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import Education from "./components/Education/Education";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Career from "./components/career/career";
-import Resume from "./components/Resume/ResumeNew";
 import Articles from "./components/Articles/Articles";
 import {
   BrowserRouter as Router,
+  Navigate,
   Route,
   Routes,
-  Navigate
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -38,14 +38,23 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Projects />} />
+          <Route
+            path="/"
+            element={
+              <main>
+                <Home />
+                <About />
+                <Career />
+                <Education />
+                <Projects />
+                <Articles />
+                <Contact />
+              </main>
+            }
+          />
           <Route path="/experience" element={<Career />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="/education" element={<Education />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
       </div>

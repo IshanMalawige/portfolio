@@ -5,6 +5,7 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineDownload,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import YY from "../../Assets/YY.jpg";
@@ -49,7 +50,17 @@ function Home2() {
               </i>
             </p>
           </Col>
-          <Col md={4} className="myAvtar" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <Col
+            md={4}
+            className="myAvtar"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "18px",
+            }}
+          >
             <Tilt>
               <div 
                 style={{
@@ -78,6 +89,14 @@ function Home2() {
                 />
               </div>
             </Tilt>
+            <a
+              className="btn btn-primary cv-download-button"
+              href={`${process.env.PUBLIC_URL}/Ishan_Malawige-CV.pdf`}
+              download="Ishan_Malawige-CV.pdf"
+            >
+              <AiOutlineDownload style={{ marginRight: "8px" }} />
+              Download CV
+            </a>
           </Col>
         </Row>
         <Row>

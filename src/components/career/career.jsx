@@ -2,7 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaCalendarAlt, FaBuilding } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+import zincatLogo from "../../Assets/CareerLogos/zincat-logo.webp";
+import vtcLogo from "../../Assets/CareerLogos/vtc-dehiwala-logo.png";
+import sltLogo from "../../Assets/CareerLogos/slt-logo.svg";
 
 // Helper function to calculate duration between start and end date automatically
 function calculateDuration(startDateStr, endDateStr) {
@@ -12,26 +15,28 @@ function calculateDuration(startDateStr, endDateStr) {
   let years = end.getFullYear() - start.getFullYear();
   let months = end.getMonth() - start.getMonth();
 
+  if (end.getDate() < start.getDate()) {
+    months--;
+  }
+
   if (months < 0) {
     years--;
     months += 12;
-  }
-
-  // Include current month partially if present
-  if (endDateStr.toLowerCase() === "present") {
-    months++;
-    if (months >= 12) {
-      years++;
-      months -= 12;
-    }
   }
 
   let result = "";
   if (years > 0) {
     result += `${years} yr${years > 1 ? "s" : ""} `;
   }
-  if (months > 0 || years === 0) {
+  if (months > 0) {
     result += `${months} mo${months > 1 ? "s" : ""}`;
+  }
+  if (!result) {
+    const elapsedDays = Math.max(
+      1,
+      Math.floor((end.getTime() - start.getTime()) / (24 * 60 * 60 * 1000))
+    );
+    return `${elapsedDays} day${elapsedDays > 1 ? "s" : ""}`;
   }
   return result.trim();
 }
@@ -39,9 +44,20 @@ function calculateDuration(startDateStr, endDateStr) {
 function Experience() {
   const experiences = [
     {
+      id: 3,
+      role: "Junior Executive - IT Support",
+      company: "Zincat Technology",
+      logo: zincatLogo,
+      startDate: "November 20, 2026",
+      endDate: "Present",
+      displayDate: "November 20, 2026 - Present",
+      points: [],
+    },
+    {
       id: 1,
       role: "Demonstrator",
       company: "Vocational Training Center Dehiwala",
+      logo: vtcLogo,
       startDate: "August 2026", // Automatic calculation සඳහා Start Date එක
       endDate: "Present",       // Present නම් දැනට ඇති දින දක්වා auto calculate වේ
       displayDate: "2026 August - Present",
@@ -54,6 +70,7 @@ function Experience() {
       id: 2,
       role: "Network Engineer Intern",
       company: "Sri Lanka Telecom PLC",
+      logo: sltLogo,
       startDate: "June 2025",
       endDate: "December 2025",
       displayDate: "June 2025 - December 2025",
@@ -69,7 +86,7 @@ function Experience() {
   ];
 
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="project-section" id="career">
       <Particle />
       <Container>
         <h1 className="project-heading">
@@ -105,14 +122,7 @@ function Experience() {
                     </div>
 
                     {/* Experience Card */}
-                    <div style={{
-                      background: "rgba(33, 20, 53, 0.6)",
-                      border: "1px solid rgba(199, 112, 240, 0.3)",
-                      padding: "25px",
-                      borderRadius: "12px",
-                      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
-                      transition: "0.3s ease"
-                    }}>
+                    <div className="career-experience-card">
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px" }}>
                         <h3 style={{ color: "#fff", fontSize: "1.3em", fontWeight: "bold", marginBottom: "8px" }}>
                           {exp.role}
@@ -131,19 +141,27 @@ function Experience() {
                         </span>
                       </div>
 
-                      <h5 style={{ color: "#c770f0", fontSize: "1em", display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
-                        <FaBuilding /> {exp.company}
-                      </h5>
+                      <div className="career-company-row">
+                        <div className="career-company-logo-frame">
+                          <img
+                            className="career-company-logo"
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
+                          />
+                        </div>
+                        <h5 className="career-company-name">{exp.company}</h5>
+                      </div>
                       <p style={{ color: "#a58cc4", fontSize: "0.85em", display: "flex", alignItems: "center", gap: "8px", marginBottom: "15px" }}>
                         <FaCalendarAlt /> {exp.displayDate}
                       </p>
                       
-                      {/* Bullet points */}
-                      <ul style={{ color: "#dfdfdf", textAlign: "justify", fontSize: "0.95em", lineHeight: "1.6", paddingLeft: "20px", margin: "0" }}>
-                        {exp.points.map((point, index) => (
-                          <li key={index} style={{ marginBottom: "8px" }}>{point}</li>
-                        ))}
-                      </ul>
+                      {exp.points.length > 0 && (
+                        <ul style={{ color: "#dfdfdf", textAlign: "justify", fontSize: "0.95em", lineHeight: "1.6", paddingLeft: "20px", margin: "0" }}>
+                          {exp.points.map((point, index) => (
+                            <li key={index} style={{ marginBottom: "8px" }}>{point}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 );

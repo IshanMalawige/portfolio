@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <Container fluid className="contact-section">
+    <Container fluid className="contact-section" id="contact">
       <Particle />
       <Container>
         <Row className="contact-container">
