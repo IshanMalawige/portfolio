@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-ishan-malawiges-projects.vercel.app/sitemap.xml
+Sitemap: https://ishanmalawige.vercel.app/sitemap.xml
