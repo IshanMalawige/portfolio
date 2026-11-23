@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="960" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17122B"/>
+      <stop offset="1" stop-color="#29214A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#C770F0"/>
+      <stop offset="1" stop-color="#8E63E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" rx="28" fill="url(#background)"/>
+  <circle cx="850" cy="90" r="180" fill="#8E63E8" fill-opacity=".08"/>
+  <circle cx="115" cy="540" r="155" fill="#C770F0" fill-opacity=".07"/>
+  <rect x="76" y="58" width="808" height="484" rx="20" fill="#11101D" stroke="#FFFFFF" stroke-opacity=".14"/>
+  <path d="M96 58h768a20 20 0 0 1 20 20v47H76V78a20 20 0 0 1 20-20Z" fill="#1D1A2B"/>
+  <circle cx="105" cy="91" r="6" fill="#FF6B78"/>
+  <circle cx="126" cy="91" r="6" fill="#F5C45E"/>
+  <circle cx="147" cy="91" r="6" fill="#63D6A4"/>
+  <rect x="350" y="78" width="260" height="26" rx="13" fill="#11101D"/>
+  <text x="480" y="96" fill="#A9A3B9" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">lankajobs.app</text>
+  <rect x="98" y="148" width="176" height="370" rx="14" fill="#1C192A"/>
+  <rect x="118" y="170" width="34" height="34" rx="10" fill="url(#accent)"/>
+  <path d="M127 181h16v12h-16zM131 177v4m8-4v4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="162" y="193" fill="#F8F6FF" font-family="Arial, sans-serif" font-size="17" font-weight="700">LankaJobs</text>
+  <rect x="116" y="228" width="140" height="38" rx="9" fill="#35264B"/>
+  <rect x="129" y="241" width="13" height="13" rx="3" fill="#C770F0"/>
+  <text x="152" y="252" fill="#F2E8FC" font-family="Arial, sans-serif" font-size="13">Job feed</text>
+  <rect x="130" y="288" width="12" height="12" rx="3" fill="#79738D"/>
+  <text x="152" y="299" fill="#A9A3B9" font-family="Arial, sans-serif" font-size="13">Applications</text>
+  <rect x="130" y="329" width="12" height="12" rx="3" fill="#79738D"/>
+  <text x="152" y="340" fill="#A9A3B9" font-family="Arial, sans-serif" font-size="13">Skill matches</text>
+  <rect x="130" y="370" width="12" height="12" rx="3" fill="#79738D"/>
+  <text x="152" y="381" fill="#A9A3B9" font-family="Arial, sans-serif" font-size="13">Saved jobs</text>
+  <text x="308" y="181" fill="#F8F6FF" font-family="Arial, sans-serif" font-size="25" font-weight="700">Find your next role</text>
+  <text x="308" y="207" fill="#A9A3B9" font-family="Arial, sans-serif" font-size="13">IT opportunities across Sri Lanka</text>
+  <rect x="308" y="226" width="544" height="42" rx="10" fill="#211E30" stroke="#FFFFFF" stroke-opacity=".12"/>
+  <circle cx="329" cy="247" r="6" stroke="#A9A3B9" stroke-width="2"/>
+  <path d="m334 252 5 5" stroke="#A9A3B9" stroke-width="2" stroke-linecap="round"/>
+  <text x="350" y="252" fill="#8E899D" font-family="Arial, sans-serif" font-size="13">Role, company, or skill</text>
+  <rect x="308" y="287" width="544" height="91" rx="12" fill="#211E30" stroke="#FFFFFF" stroke-opacity=".11"/>
+  <rect x="326" y="305" width="44" height="44" rx="10" fill="#362955"/>
+  <path d="M338 319h20v15h-20zM342 315h12v4h-12z" stroke="#D8B6F1" stroke-width="2" stroke-linejoin="round"/>
+  <text x="385" y="317" fill="#F8F6FF" font-family="Arial, sans-serif" font-size="15" font-weight="700">Software Engineer</text>
+  <text x="385" y="339" fill="#AAA4B8" font-family="Arial, sans-serif" font-size="12">Technology company · Colombo</text>
+  <rect x="742" y="304" width="91" height="25" rx="12" fill="#342545"/>
+  <text x="787" y="321" fill="#D9B3F5" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Full-time</text>
+  <text x="385" y="361" fill="#8F899E" font-family="Arial, sans-serif" font-size="11">React · Python · 2 days ago</text>
+  <rect x="308" y="393" width="544" height="91" rx="12" fill="#211E30" stroke="#FFFFFF" stroke-opacity=".11"/>
+  <rect x="326" y="411" width="44" height="44" rx="10" fill="#263951"/>
+  <path d="M338 425h20v15h-20zM342 421h12v4h-12z" stroke="#A9D6F4" stroke-width="2" stroke-linejoin="round"/>
+  <text x="385" y="423" fill="#F8F6FF" font-family="Arial, sans-serif" font-size="15" font-weight="700">Junior Data Analyst</text>
+  <text x="385" y="445" fill="#AAA4B8" font-family="Arial, sans-serif" font-size="12">Finance group · Colombo</text>
+  <rect x="742" y="410" width="91" height="25" rx="12" fill="#253647"/>
+  <text x="787" y="427" fill="#A9D6F4" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Hybrid</text>
+  <text x="385" y="467" fill="#8F899E" font-family="Arial, sans-serif" font-size="11">SQL · Excel · 4 days ago</text>
+  <rect x="705" y="497" width="128" height="28" rx="14" fill="url(#accent)"/>
+  <text x="769" y="516" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Track applications</text>
+</svg>

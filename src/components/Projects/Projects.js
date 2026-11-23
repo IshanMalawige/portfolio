@@ -10,6 +10,7 @@ import PY from "../../Assets/Projects/PY.png";
 import CA from "../../Assets/Projects/CA.png";
 import Guess from "../../Assets/Projects/Guess.jpeg";
 import XX from "../../Assets/Projects/XX.webp";
+import LankaJobs from "../../Assets/Projects/LankaJobs.svg";
 import networkTopologyImg from "../../Assets/network topology.jpg";
 import multiSiteNetworkImg from "../../Assets/article2.jpg";
 import activeDirectoryImg from "../../Assets/article3.jpg"; // Project 3 සඳහා Active Directory Lab image එක
@@ -105,6 +106,14 @@ function Projects() {
       description: "The Calculator app, developed using Flutter and Dart, is a sleek and responsive mobile application that allows users to perform basic arithmetic operations with an intuitive interface.",
       ghLink: "",
       category: "Mobile Application Projects",
+    },
+    {
+      id: 12,
+      imgPath: LankaJobs,
+      title: "LankaJobs",
+      description: "A full-stack IT job aggregator and application tracker for Sri Lanka, built with React, Tailwind CSS, FastAPI, and SQLAlchemy. It brings job listings together, supports CV-based skill matching, tracks applications on a Kanban board, and includes a browser extension for saving jobs.",
+      ghLink: "https://github.com/IshanMalawige/Lanka-Jobs",
+      category: "Software Development",
     },
   ];
 
